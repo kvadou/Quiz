@@ -1,3 +1,11 @@
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
 body {
   /* image for background */
 
@@ -14,8 +22,12 @@ button {
   margin: 1em;
 }
 
+startJSQuiz {
+
+}
+
 .navbar {
-  background-color: #0000FF;  
+  background-color: blue;  
   color: white;  
   /* pulls everything down to push up against bottom border */
   padding-bottom: 0;
@@ -27,7 +39,7 @@ button {
 #navbar-title {
   padding: 15px;
   font-size: 30px;
-  color: #fff
+  color: white;
 }
 
 /* container for nav header */
@@ -47,9 +59,9 @@ button {
 .nav-link:hover {
   /* question how do i impact these values without using important */
   /* background-color: #4Cabc2 !important; */
-  background-color: #b6d7e2;  
+  background-color: white;  
   /* color: #fff !important; */
-  color: #666;
+  color: blue;
 }
 
 .right {
@@ -74,7 +86,7 @@ li {
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 5px;
-  background-color: #897d9a;
+  background-color: blue;
   color: #fff;
   font-size: 1.5em;
   line-height: 1.5;
@@ -82,17 +94,13 @@ li {
 }
 
 li:hover {
-  background-color: #9e9268;
+  background-color: green;
 }
 
 #answer-image {
   float: left;
   padding-right: 1em;
   padding-top: 0.25em;
-}
-
-#startQuiz{
-  /* TODO style buttom */
 }
 
 .footer {

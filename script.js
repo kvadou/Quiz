@@ -1,4 +1,3 @@
-//removing question duration
 
 // pull in page objects
 let highscoreDiv = document.querySelector("#highscore");
@@ -27,19 +26,17 @@ let questionInterval;
 // draw instruction
 init();
 
-// var startButton = document.querySelector("#startQuiz");
-
 // function to display instructions
 function init() {
   clearDetails();
   reset();
   // creates Heading element for main page
-  let heading = document.createElement("p");
+  let heading = document.createElement("h1");
   heading.setAttribute("id", "main-heading");
-  heading.textContent = " Coding Quiz Challenge ";
+  heading.textContent = " JavaScript Quiz ";
 
   // creates elements with the instructions for the game
-  let instructions = document.createElement("p");
+  let instructions = document.createElement("h2");
   instructions.setAttribute("id", "instructions");
   instructions.textContent = " Try to answer the following code-related questions within the time limit.  Keep in mind that incorrect answers will penalize your score/time by ten seconds! "; 
 
@@ -47,7 +44,7 @@ function init() {
   // creates button to start the game
   let startJsQuiz = document.createElement("button");
   startJsQuiz.setAttribute("id", "startJSQuiz");
-  startJsQuiz.setAttribute("class", "btn btn-secondary");
+  startJsQuiz.setAttribute("class", "btn btn-primary");
   startJsQuiz.textContent= "Start Javascript Quiz";
 
   mainEl.appendChild(heading);
@@ -216,7 +213,7 @@ function showAnswers(cur) {
 
     if ( cur.choices[i] !== cur.answer ) {
       if (test) { console.log("color test flase");}
-      questrow.setAttribute("style","background-color: red");
+      questrow.setAttribute("style","background-color: blue");
     } else {
       if (test) { console.log("color test true");}
       questrow.setAttribute("style","background-color: green");
@@ -281,23 +278,23 @@ function endOfGame() {
 
   timerTab.setAttribute("style", "visibility: hidden;");
 
-  let heading = document.createElement("p");
+  let heading = document.createElement("h1");
   heading.setAttribute("id", "main-heading");
-  heading.textContent = "GAME OVER - I hope you have enjoyed this";
+  heading.textContent = "GAME OVER!";
 
   // creates elements with the instructions for the game
-  let instructions = document.createElement("p");
+  let instructions = document.createElement("h2");
   instructions.setAttribute("id", "instructions");
   instructions.textContent = " Your score is " + score; 
 
   // creates button to start the game
   let playAgain = document.createElement("button");
   playAgain.setAttribute("id", "playAgain");
-  playAgain.setAttribute("class", "btn btn-secondary");
+  playAgain.setAttribute("class", "btn btn-primary");
   playAgain.textContent = "Play again";
 
   // creates input for user to add initials
-  let par = document.createElement("p");
+  let par = document.createElement("h1");
 
   let initialsLabel = document.createElement("label");
   initialsLabel.setAttribute("for","userInitials");
@@ -374,12 +371,12 @@ function highScores() {
     for (let i = 0; i < numScores2Display; i++) {
       let s = storedScores[i];
 
-      let p = document.createElement("p");
+      let p = document.createElement("h2");
       p.textContent = s.name + " " + s.score + " ( " + s.type + " )";
       mainEl.appendChild(p);
     }
   } else {
-    let p = document.createElement("p");
+    let p = document.createElement("h2");
     p.textContent =  "Your Initials Here!"
     mainEl.appendChild(p);
   }
@@ -388,7 +385,7 @@ function highScores() {
   // creates button to start the game
   let playAgain = document.createElement("button");
   playAgain.setAttribute("id", "playAgain");
-  playAgain.setAttribute("class", "btn btn-secondary");
+  playAgain.setAttribute("class", "btn btn-primary");
   playAgain.textContent = "Play!";
 
   mainEl.appendChild(playAgain);
