@@ -1,63 +1,44 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.1.1">
-    <title>Coding Quiz Challenge</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/pricing/">
-
-    <!-- Bootstrap core CSS -->
-<link href="./assets/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-    <!-- Custom styles for this template -->
-    <link href="style.css" rel="stylesheet">
-</head>
-    <body>
-        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-        <a class="btn btn-outline-primary" href="#">High Scores </a>
-    <h5 class="my-0 mr-md-auto font-weight-normal"></h5>
-    <h5 class="outline-primary" id ="time">Time: 00</h5>
-</div>
-<div class="container">
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <h1 class="display-4">Coding Quiz Challenge</h1>
-  <p class="lead">Try to answer the following code-related questions within the time limit.  Keep in mind that incorrect answered will penalize your score/time by ten seconds!</p>
-</div>
-    <div class="row">
-        <div class="col-md-5">
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>JavaScript Quiz</title>
+  </head>
+  <body>
+    <!-- Start header -->
+    <nav class="navbar navbar-expand-md fixed-top">
+      <div class="container-fluid">
+            <div id="highscore" class="nav-item nav-link"> View High Scores</div>
+            <h1 id="navbar-title">Coding Quiz Challenge</h1>
+            <table id=timers style="visibility: hidden;">
+              <tr>
+                <td> Time left in Game: </td>
+                <td> <span id="gameTimer" class="nav-item"></span> </td>
+              </tr>
+            </table>
         </div>
-        <div class="col-md-2">
-        <div class="card-deck mb-3 text-center">
-    <div class="card mb-4 shadow-sm">
-        <button type="button" id="start-quiz" class="btn btn-lg btn-block btn-primary">Start Quiz</button>
       </div>
-    </div>
-  </div>
-</div>
-</div>
-        <div class="col-md-5">
-        </div> 
-<div id="main"></div>
-<script src="script.js"></script>
-</body>
+    </nav>
+    <!-- end header -->
+    <!-- start Content -->
+    <div class="container-fluid">
+      <!-- need a place for the intro instructions and quiz -->
+      <section id="details"> </section>
+    </div>    
+  <!-- End Content -->
+
+  <!-- Start Footer -->
+    <nav class="navbar fixed-bottom footer">
+    </nav>
+  <!-- End Footer -->
+
+    <!-- read in file containing questions for quiz -->
+    
+    <!-- read in javascript file  -->
+    <script src='./script.js'></script>
+  </body>
 </html>
