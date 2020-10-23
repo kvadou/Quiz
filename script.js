@@ -1,3 +1,4 @@
+//drew on some elements from https://github.com/gabepettus/TimedQuiz, modified to meet the requirements of our project //
 
 // pull in page objects
 let highscoreDiv = document.querySelector("#highscore");
@@ -40,7 +41,6 @@ function init() {
   instructions.setAttribute("id", "instructions");
   instructions.textContent = " Try to answer the following code-related questions within the time limit.  Keep in mind that incorrect answers will penalize your score/time by ten seconds! "; 
 
-  // adding more question - this should move into loop or function
   // creates button to start the game
   let startJsQuiz = document.createElement("button");
   startJsQuiz.setAttribute("id", "startJSQuiz");
@@ -296,9 +296,9 @@ function endOfGame() {
   // creates input for user to add initials
   let par = document.createElement("h1");
 
-  let initialsLabel = document.createElement("label");
+  let initialsLabel = document.createElement("h2");
   initialsLabel.setAttribute("for","userInitials");
-  initialsLabel.textContent = "Enter Initials: ";
+  initialsLabel.textContent = "Enter Initials";
 
   let initialsInput = document.createElement("input");
   initialsInput.setAttribute("id","userInitials");
@@ -306,6 +306,7 @@ function endOfGame() {
   initialsInput.setAttribute("minlength","3");
   initialsInput.setAttribute("maxlength","3");
   initialsInput.setAttribute("size","3");
+
 
 
   mainEl.appendChild(heading);
@@ -350,7 +351,7 @@ function highScores() {
   let storedScores = JSON.parse(localStorage.getItem("highScores")); 
 
   // draw heading
-  let heading = document.createElement("h2");
+  let heading = document.createElement("h1");
   heading.setAttribute("id", "main-heading");
   heading.textContent = "Top 5 High Score Hall of Fame";
 
@@ -383,10 +384,11 @@ function highScores() {
 
 
   // creates button to start the game
-  let playAgain = document.createElement("button");
+  let playAgain = document.createElement("Button");
   playAgain.setAttribute("id", "playAgain");
   playAgain.setAttribute("class", "btn btn-primary");
   playAgain.textContent = "Play!";
+  
 
   mainEl.appendChild(playAgain);
 
