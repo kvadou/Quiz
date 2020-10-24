@@ -4,4 +4,6 @@ Developed a JavaScript coding quiz with dynamically updated HTML & CSS powered b
 
 When the game is finished, you have the opportunity to input your initials and have them displayed on the High Score Hall of Fame.  High Score Hall of Fame can be accessed form the main home page in the upper left corner.
 
+Quiz can be accessed via - https://kvadou.github.io/Quiz/.
+
 ![Screen Shot 2020-10-24 at 2 05 37 PM](https://user-images.githubusercontent.com/15655389/97091519-0126d580-1602-11eb-85d5-6fa994dd1ff7.png)
