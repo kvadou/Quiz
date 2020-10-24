@@ -1,6 +1,6 @@
-//drew on some elements from https://github.com/gabepettus/TimedQuiz, modified to meet the requirements of our project //
+//drew on elements from https://github.com/gabepettus/TimedQuiz, modified to meet the requirements of our project //
 
-// pull in page objects
+// set variables to pull page objects
 let highscoreDiv = document.querySelector("#highscore");
 let gameTimerEl = document.querySelector("#gameTimer");
 let mainEl = document.querySelector("#details");
@@ -10,7 +10,6 @@ let timerTab = document.querySelector("#timers");
 let questionEl = document.querySelector("#question")
 let answersListEl = document.querySelector("#answer-list")
 
-// set global variables - how do we move these into localized
 let test = false;
 let score = 0;
 let quiz = {};
@@ -44,7 +43,7 @@ function init() {
   // creates button to start the game
   let startJsQuiz = document.createElement("button");
   startJsQuiz.setAttribute("id", "startJSQuiz");
-  startJsQuiz.setAttribute("class", "btn btn-primary");
+  startJsQuiz.setAttribute("class", "btn btn-dark");
   startJsQuiz.textContent= "Start Javascript Quiz";
 
   mainEl.appendChild(heading);
@@ -213,10 +212,10 @@ function showAnswers(cur) {
 
     if ( cur.choices[i] !== cur.answer ) {
       if (test) { console.log("color test flase");}
-      questrow.setAttribute("style","background-color: blue");
+      questrow.setAttribute("style","background-color: #0062e6");
     } else {
       if (test) { console.log("color test true");}
-      questrow.setAttribute("style","background-color: green");
+      questrow.setAttribute("style","background-color: black");
     }
   }
   // pause so user can see results
@@ -290,7 +289,7 @@ function endOfGame() {
   // creates button to start the game
   let playAgain = document.createElement("button");
   playAgain.setAttribute("id", "playAgain");
-  playAgain.setAttribute("class", "btn btn-primary");
+  playAgain.setAttribute("class", "btn btn-dark");
   playAgain.textContent = "Play again";
 
   // creates input for user to add initials
@@ -386,7 +385,7 @@ function highScores() {
   // creates button to start the game
   let playAgain = document.createElement("Button");
   playAgain.setAttribute("id", "playAgain");
-  playAgain.setAttribute("class", "btn btn-primary");
+  playAgain.setAttribute("class", "btn btn-dark");
   playAgain.textContent = "Play!";
   
 
